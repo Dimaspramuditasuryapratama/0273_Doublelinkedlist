@@ -75,5 +75,21 @@ class DoubleLinkedList
         current->next = newNode; // step 9d: current.next = newNode
     }
 
-    
+    void hapus()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        cout << "\nEnter the roll number of the student whose record is to be deleted: ";
+        int rollNo;
+        cin >> rollNo;
+
+        Node *current = START;
+
+        // step 1: Traverse the list to find the node
+        
+    }
 };
