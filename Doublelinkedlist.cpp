@@ -34,7 +34,7 @@ class DoubleLinkedList
         newNode->noMhs = nim;
 
         //step 3: Insert at beginning if liist is empty or nim is smallest
-        if (START == NULL || nim <<= START->noMhs)
+        if (START == NULL || nim <= START->noMhs)
         {
             if (START != NULL && nim == START->noMhs)
             {
@@ -55,6 +55,16 @@ class DoubleLinkedList
             START = newNode;
             return;
         }
+
+        // insert in between node
+        // step 8: locate position for insertion
+        Node *current = START;
+        while (current->next != NULL && current->next->noMhs < nim)
+        {
+            cout << "\nDuplicate roll numbers noy allowed" << endl;
+            return;
+        }
+
         
     }
 };
